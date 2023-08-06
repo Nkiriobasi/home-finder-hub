@@ -11,7 +11,10 @@
 
 /* CSS VARIABLES */
 :root {
-  --dark-blue: #091638;
-  --light-blue: #F3F3FA;
+  --light-mode: #091638;
+  --dark-mode: #F3F3FA;
+
+  --header-text-light-color: #141B2D;
+  --header-text-dark-color: #F3F3FA;
 }
 

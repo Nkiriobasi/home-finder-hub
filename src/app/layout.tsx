@@ -3,27 +3,28 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import Header from '@/layouts/header/header'
 
-  const robotoMono = localFont({
-    src: [
-      {
-        path: './Roboto_Mono/static/RobotoMono-Regular.ttf',
-        weight: '400',
-        style: 'normal',
-      },
-      {
-        path: './Roboto_Mono/static/RobotoMono-Medium.ttf',
-        weight: '500',
-        style: 'medium',
-      },
-      {
-        path: './Roboto_Mono/static/RobotoMono-Bold.ttf',
-        weight: '700',
-        style: 'bold',
-      },
-    ],
-    display: 'swap',
-  })
+const robotoMono = localFont({
+  src: [
+    {
+      path: './Roboto_Mono/static/RobotoMono-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './Roboto_Mono/static/RobotoMono-Medium.ttf',
+      weight: '500',
+      style: 'medium',
+    },
+    {
+      path: './Roboto_Mono/static/RobotoMono-Bold.ttf',
+      weight: '700',
+      style: 'bold',
+    },
+  ],
+  display: 'swap',
+})
 
 
 export const metadata: Metadata = {
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={robotoMono.className}>
       <body>
         <Theme>
+          <Header />
           {children}
         </Theme>
       </body>
