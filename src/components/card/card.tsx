@@ -1,14 +1,16 @@
 import Image from "next/image"
 
-import cardImg from '../../../public/card-img.svg'
 import HeadingText from "../headingText/headingText"
 
+interface CardPropsType {
+    img: any
+}
 
-const Card = () => {
+const Card:React.FC<CardPropsType> = ({ img }) => {
   return (
     <div className="max-w-[350px] block relative bg-white dark:bg-[#1e1e1e] rounded shadow cursor-pointer">
         <div className="w-full">
-            <Image src={cardImg} alt='/' className="w-full" priority />
+            <Image src={img} alt='/' className="w-full" priority />
         </div>
 
         <div className="mt-[10px] pt-[10px] p-5 flex flex-col">
