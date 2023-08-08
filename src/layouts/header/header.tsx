@@ -6,7 +6,7 @@ import ThemeSwitcher from "@/components/themeSwitcher/themeSwitcher"
 
 const Header = () => {
   return (
-    <header className="sticky top-0 bg-inherit">
+    <header className="sticky top-0 dark:bg-[#1e1e1e] bg-white z-[2023] drop-shadow">
       <div className="w-full py-3 md:px-6 px-4 max-w-full">
         <div className="relative flex items-center">
           {/* App Logo */}
@@ -18,7 +18,7 @@ const Header = () => {
 
           <div className="w-full flex flex-row items-center justify-between">
             {/* Header Links */}
-            <div className="block">
+            <div className="lg:block hidden">
               <ul className="flex items-center">
                 <HeaderLinks />
               </ul>
@@ -30,7 +30,7 @@ const Header = () => {
                 <ThemeSwitcher />
               </span>
               
-              <Button text="Contact us" />
+              <Button text="Contact us" styles="py-2 px-4" />
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-/* CSS VARIABLES */
+/* Css Variables */
 :root {
   --light-mode: #091638;
   --dark-mode: #F3F3FA;
@@ -18,3 +18,12 @@
   --header-text-dark-color: #F3F3FA;
 }
 
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
