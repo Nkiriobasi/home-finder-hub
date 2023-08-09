@@ -6,7 +6,7 @@ import ParagraphText from "@/components/paragraphText/paragraphText"
 import View1Image2 from '../../../../public/view1-image2.svg'
 import SearchBar from "@/components/searchBar/searchBar"
 
-const View = () => {
+const Landing = () => {
   
   return (
     <section className="w-full max-w-full flex">
@@ -16,11 +16,11 @@ const View = () => {
             <div className="md:w-[50%] w-full block">
               <div className="w-full flex flex-col md:max-w-[545px] max-w-full">
                 <div className="w-full relative mb-5 flex">
-                  <HeadingText styles="xl:text-[64px] lg:text-[54px] md:text-[44px] text-[34px] font-bold leading-[1.2]">Modern living for everyone</HeadingText>
+                  <HeadingText styles="xl:text-[64px] lg:text-[54px] md:text-[44px] text-[34px]">Modern living for everyone</HeadingText>
                 </div>
                         
                 <div className="w-full relative mb-5 flex">
-                  <ParagraphText styles="lg:text-[22px] sm:text-[16px] text-sm font-normal leading-[1.4]">
+                  <ParagraphText styles="lg:text-[22px] sm:text-[16px] text-sm">
                     We provide a complete service for the sale, purchase or rental of real estate. 
                     We have been operating in Madrid and Barcelona more than 15 years.
                   </ParagraphText>
@@ -42,4 +42,4 @@ const View = () => {
   )
 }
 
-export default View
+export default Landing
