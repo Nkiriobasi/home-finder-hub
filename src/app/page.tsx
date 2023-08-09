@@ -1,12 +1,16 @@
-import View1 from "@/layouts/homepage/view1/view";
-import View2 from "@/layouts/homepage/view2/view";
+import OurTeam from "@/layouts/homepage/ourTeam/ourTeam";
+import Landing from "@/layouts/homepage/landing/landing";
+import TopOffers from "@/layouts/homepage/topOffers/topOffers";
+import AboutUs from "@/layouts/homepage/aboutUs/aboutUs";
 
 
 export default function Home() {
   return (
     <main>
-      <View1 />
-      <View2 />
+      <Landing />
+      <TopOffers />
+      <AboutUs />
+      <OurTeam />
     </main>
   )
 }
