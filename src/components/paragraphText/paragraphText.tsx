@@ -7,7 +7,7 @@ interface ParagraphTextPropsType {
 
 const ParagraphText:React.FC<ParagraphTextPropsType> = ({ styles, children }) => {
   return (
-    <p className={styles}>{children}</p>
+    <p className={`font-normal leading-[1.5] dark:text-white text-[#091638] ${styles}`}>{children}</p>
   )
 }
 
