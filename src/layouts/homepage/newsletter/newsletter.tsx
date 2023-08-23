@@ -39,7 +39,8 @@ const Newsletter = () => {
                                 placeholder="Your e-mail address" 
                                 className="w-[70%] block border-2 border-[#DDDDDD] bg-inherit outline-none
                                 placeholder:lg:text-base placeholder:text-sm sm:text-base text-sm text-black bg-white
-                                py-[11px] px-[14px] rounded-lg focus:outline-none focus:border-[#1C3988] focus:ring-[#1C3988]" 
+                                py-[11px] sm:px-[14px] px-[11px] rounded-lg focus:outline-none focus:border-[#1C3988] 
+                                focus:ring-[#1C3988]" 
                             />
 
                             <Button 

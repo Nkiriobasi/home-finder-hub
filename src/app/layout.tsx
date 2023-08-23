@@ -4,6 +4,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Header from '@/layouts/header/header'
+import Footer from './../layouts/footer/footer';
 
 const robotoMono = localFont({
   src: [
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Theme>
           <Header />
           {children}
+          <Footer />
         </Theme>
       </body>
     </html>
