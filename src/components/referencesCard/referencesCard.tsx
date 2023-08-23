@@ -16,7 +16,7 @@ const ReferencesCard:React.FC<ReferencesCardPropsType> = ({ name, address }) => 
             <span className="flex items-start w-full">
                 <span 
                     className="md:text-[65px] sm:text-[55px] text-[45px] 
-                    text-[#091638] dark:text-white mt-[-24px] flex"
+                    text-[#1C3988] mt-[-24px] flex"
                 >
                     “
                 </span>

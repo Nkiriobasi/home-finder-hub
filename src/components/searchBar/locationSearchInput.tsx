@@ -13,6 +13,8 @@ const LocationSearchInput = () => {
       <form className="w-full flex items-center flex-auto">
         <input 
           type="text" 
+          id="search"
+          name="search"
           className="w-full sm:p-[14px] p-[10px] pl-0 rounded-r-lg bg-inherit outline-none border-none 
           placeholder:lg:text-base placeholder:text-sm lg:text-base text-sm text-black" 
           placeholder="Search of location" 

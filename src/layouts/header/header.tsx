@@ -30,7 +30,10 @@ const Header = () => {
                 <ThemeSwitcher />
               </span>
               
-              <Button text="Contact us" styles="py-2 px-4" />
+              <Button 
+                text="Contact us" 
+                styles="py-2 px-4 bg-[#1C3988] text-[#F3F3FA]" 
+              />
             </div>
           </div>
         </div>
