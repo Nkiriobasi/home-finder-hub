@@ -6,7 +6,7 @@ import ParagraphText from "@/components/paragraphText/paragraphText"
 import View1Image2 from '../../../../public/view1-image2.svg'
 import SearchBar from "@/components/searchBar/searchBar"
 
-const Landing = () => {
+const  Heading = () => {
   
   return (
     <section className="w-full max-w-full flex">
@@ -42,4 +42,4 @@ const Landing = () => {
   )
 }
 
-export default Landing
+export default Heading
