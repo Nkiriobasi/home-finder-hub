@@ -1,9 +1,15 @@
+"use client"
+
 import React, { useState } from "react";
 
+interface IMyProps {
+    defaultValue: string
+} 
 
-const DropDown = () => {
+const DropDown: React.FC<IMyProps> = ({defaultValue}) => {
     const [dropdown, setdropdown] = useState(0);
-    const dropdownList = ["Tesla", "Volvo", "Mercedes"];
+    const [isOpen, setIsOpen] = useState(false);
+    const dropdownList = ["Tesla", "Volvo", "Mercedes", "Toyota"];
 
     const dropdownListClick = (index: React.SetStateAction<number>) => {
         setdropdown(index);
@@ -11,61 +17,47 @@ const DropDown = () => {
   
   return(
   
-    <>
-        {/* <div className="max-w-[205px] bg-white">
-            <button
-                className="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton"
+    <>        
+        <div className="max-w-[262px] w-full relative">
+            <button 
+                onClick={() => setIsOpen(!isOpen)}
+                id="dropdownMenuButton" 
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-            >
-                {dropdownList[dropdown]}
-            </button>
-            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                {dropdownList.map((value, index) => {
-                    return (
-                        <>
-                            <a
-                                className="dropdown-item"
-                                href="#"
-                                onClick={() => dropdownListClick(index)}
-                                key={index}
-                            >
-                                {value}
-                            </a>
-                        </>
-                    );
-                })}
-            </div>
-        </div> */}
-        
-        <div className="max-w-[205px] bg-white rounded-lg">
-            <button 
-                id="dropdownHoverButton" 
-                data-dropdown-toggle="dropdownHover" 
-                data-dropdown-trigger="hover"  
                 type="button"
-                className="font-medium rounded-lg text-sm p-[14px] text-center inline-flex items-center justify-between w-full bg-inherit text-black"
+                className={`font-medium text-sm p-[14px] text-center 
+                inline-flex rounded-lg bg-white items-center justify-between 
+                w-full bg-inherit text-gray-700 dark:text-black border-2 border-solid 
+                ${isOpen ? 'border-[#1C3988]' : 'border-[#DDDDDD]'}`}
             >
-                Property type <svg className="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/></svg>
+                {/* {dropdownList[dropdown]} */}
+                {defaultValue} <svg className="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/></svg>
             </button>
        
-            <div id="dropdownHover" className="w-full z-10 bg-white hidden divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700">
-                <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
-                    <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                    </li>
-                    <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                    </li>
-                    <li>
-                        <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-                    </li>
+            <div 
+                id="dropdownHover" 
+                className={`w-full z-10 bg-white ${isOpen ? 'block' : 'hidden'}
+                divide-y divide-gray-100 rounded-lg shadow absolute top-[52px]`}
+            >
+                <ul 
+                    className="py-2 text-sm text-gray-700 dark:text-black rounded-lg" 
+                    aria-labelledby="dropdownMenuButton"
+                >
+                    {dropdownList.map((value, index) => {
+                        return (
+                            <>
+                                <a
+                                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                    href="#"
+                                    onClick={() => dropdownListClick(index)}
+                                    key={index}
+                                >
+                                    {value}
+                                </a>
+                            </>
+                        );
+                    })}
                 </ul>
             </div>
         </div>

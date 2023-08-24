@@ -6,7 +6,7 @@ const Heading = () => {
     <section className='w-full max-w-full flex'>
         <div 
             className="max-w-[1287px] mx-auto w-full md:pt-[80px] pt-[50px] 
-            pb-[50px] sm:px-5 px-[14px] flex flex-col"
+            md:pb-[50px] pb-[34px] sm:px-5 px-[14px] flex flex-col"
         >
             <div className="flex flex-col items-center justify-start w-full">
                 <span className="inline-block text-center">

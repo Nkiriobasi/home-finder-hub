@@ -1,20 +1,17 @@
-import OurTeam from "@/layouts/homepage/ourTeam/ourTeam";
-import Landing from "@/layouts/homepage/landing/landing";
-import TopOffers from "@/layouts/homepage/topOffers/topOffers";
-import AboutUs from "@/layouts/homepage/aboutUs/aboutUs";
-import References from "@/layouts/homepage/references/references";
-import Newsletter from "@/layouts/homepage/newsletter/newsletter";
-
+import OurTeam from "@/layouts/landing/ourTeam/ourTeam";
+import Heading from "@/layouts/landing/heading/heading";
+import TopOffers from "@/layouts/landing/topOffers/topOffers";
+import AboutUs from "@/layouts/landing/aboutUs/aboutUs";
+import References from "@/layouts/landing/references/references";
 
 export default function Home() {
   return (
     <main>
-      <Landing />
+      <Heading />
       <TopOffers />
       <AboutUs />
       <OurTeam />
       <References />
-      <Newsletter />
     </main>
   )
 }
