@@ -1,33 +1,11 @@
-import Theme from '@/providers/themeProvider'
+import { Providers } from '@/providers/providers';
 import './globals.css'
-
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
-import Header from '@/layouts/general/header/header'
-import Footer from './../layouts/general/footer/footer';
-import Newsletter from '@/layouts/general/newsletter/newsletter'
+import { Inter } from "next/font/google";
+import Navbar from '@/components/navbar/navbar';
+import Footer from '@/components/footer/footer';
 
-const robotoMono = localFont({
-  src: [
-    {
-      path: './Roboto_Mono/static/RobotoMono-Regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './Roboto_Mono/static/RobotoMono-Medium.ttf',
-      weight: '500',
-      style: 'medium',
-    },
-    {
-      path: './Roboto_Mono/static/RobotoMono-Bold.ttf',
-      weight: '700',
-      style: 'bold',
-    },
-  ],
-  display: 'swap',
-})
-
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Home Finder Hub',
@@ -36,14 +14,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={robotoMono.className}>
+    <html lang="en" className={inter.className}>
       <body>
-        <Theme>
-          <Header />
-          {children}
-          <Newsletter />
-          <Footer />
-        </Theme>
+        <div className="container">
+          <Providers>
+            <Navbar />
+            {children}
+            <Footer />
+          </Providers>
+        </div>
       </body>
     </html>
   )

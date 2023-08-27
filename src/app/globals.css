@@ -1,33 +1,53 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* GENERAL STYLES RESET DEFAULT */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
   overflow-x: hidden;
 }
 
-/* Css Variables */
-:root {
-  --light-mode: #091638;
-  --dark-mode: #F3F3FA;
-
-  --header-text-light-color: #141B2D;
-  --header-text-dark-color: #F3F3FA;
+.container {
+  max-width: 2200px;
+  margin: 0 auto;
 }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+.propertiesGrid {
+  display: grid;
 }
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+@media only screen and (min-width: 1800px){
+  .propertiesGrid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 1800px){
+  .propertiesGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 1400px){
+  .propertiesGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 920px){
+  .propertiesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 620px){
+  .propertiesGrid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+.propertiesGridItem {
+  display: flex;
+  height: 100%;
+  flex-grow: 0;
+  flex-shrink: 1;
+  padding: 1rem;
+  flex-basis: auto;
+  flex-wrap: wrap;
+  cursor: pointer;
 }
